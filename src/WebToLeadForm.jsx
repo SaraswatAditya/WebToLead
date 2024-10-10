@@ -1,27 +1,12 @@
 import React from "react";
-import { toast, Toaster } from "react-hot-toast";
 
 const WebToLeadForm = () => {
-  // Function to handle form submission and show a toast
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents form from submitting immediately
-    toast.success("Form submitted successfully!", {
-      duration: 4000,
-      position: "top-right",
-    });
-    e.target.submit(); // Submits the form after showing the toast
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-300 via-pink-200 to-red-300 p-4">
-      <div>
-        <Toaster />
-      </div>
       <form
-        className="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 w-full max-w-lg"
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-lg"
         action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DNS000001DcJs"
         method="POST"
-        onSubmit={handleSubmit} // Call handleSubmit on form submission
       >
         <input type="hidden" name="oid" value="00DNS000001DcJs" />
         <input
@@ -30,10 +15,15 @@ const WebToLeadForm = () => {
           value="https://web-to-lead-aditya-saraswats-projects.vercel.app"
         />
 
-        <h2 className="text-2xl font-bold text-center text-gray-700 mb-6">Web Form</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-700 mb-6">
+          Web Form
+        </h2>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first_name">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="first_name"
+          >
             First Name
           </label>
           <input
@@ -47,7 +37,10 @@ const WebToLeadForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="last_name">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="last_name"
+          >
             Last Name
           </label>
           <input
@@ -61,7 +54,10 @@ const WebToLeadForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="phone"
+          >
             Phone
           </label>
           <input
@@ -75,7 +71,10 @@ const WebToLeadForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="email"
+          >
             Email
           </label>
           <input
@@ -89,7 +88,10 @@ const WebToLeadForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="company">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="company"
+          >
             Company
           </label>
           <input
